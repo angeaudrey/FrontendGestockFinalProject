@@ -1,0 +1,58 @@
+
+
+
+<!-- <div class="col-md-6 offset-md-3 mt-5">
+  <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+
+  <div class="card">
+      <h4 class="card-header py-3">Connexion Application de troc</h4>
+      <div class="card-body">
+          <form [formGroup]="form">
+              <div class="mb-3">
+                  <label class="form-label">Username</label>
+                  <input type="text" name="username" formControlName="username"  class="form-control"/>
+
+              </div>
+              <div class="mb-3">
+                  <label class="form-label">Password</label>
+                  <input name="password" formControlName="password" type="password"  class="form-control"/>
+
+              </div>
+
+              <button class="button button-primary"
+                      (click)="login()">Login</button>
+          </form>
+      </div>
+  </div>
+</div> -->
+  <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+              <h2 class="fw-bold mb-2 text-uppercase">Connexion</h2>
+              <p class="text-white-50 mb-5">Veuillez saisir votre identifiant et votre mot de passe !</p>
+          <form [formGroup]="form">
+
+              <div class="form-outline form-white mb-4">
+                <input type="text"  name="username" formControlName="username" class="form-control form-control-lg" placeholder="username"/>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <input type="password" id="typePasswordX" name="password" formControlName="password" type="password" placeholder="mot de passe"  class="form-control form-control-lg" />
+              </div>
+
+              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Mot de passe oublié?</a></p>
+
+              <button class="btn btn-outline-light btn-lg px-5" (click)="login()">Connexion</button>
+              <p class="mb-0">Vous n'avez pas de compte ?<a  class="nav-link" routerLink="/register"> S'inscrire</a>
+              </p>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

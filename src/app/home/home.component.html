@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let article of total[0]">
+    <div class="card">
+      <img class="card-img-top" height="200px" width="200px" [src]="article.photo" alt="{{ article.designation }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ article.designation }}</h5>
+        <p class="card-text">{{ article.description }}</p>
+        <p class="card-text">{{ article.montantestimation }} CFA</p>
+        <p class="card-text"><small class="text-muted">{{ article.datecreation | date:'medium' }}</small></p>
+        <p class="card-text"><small class="text-muted">{{ article.category }}</small></p>
+
+      </div>
+    </div>
+  </div>
+</div>

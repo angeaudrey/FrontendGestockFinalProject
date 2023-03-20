@@ -1,0 +1,28 @@
+<form class="form-signin" [formGroup]="registerForm" (submit)="register()">
+<h1 class="h3 mb-3 fw-normal">Inscription</h1>
+ <div class="form-outline form-white mb-4">
+      <input type="text"  name="username" formControlName="username" class="form-control form-control-lg" placeholder="username"/>
+ </div>
+<div class="form-outline form-white mb-4">
+      <input type="text"  name="name" formControlName="name" class="form-control form-control-lg" placeholder="name"/>
+ </div>
+<div class="form-outline form-white mb-4">
+      <input type="text"  name="phone_number" formControlName="phone_number" class="form-control form-control-lg" placeholder="phone_number"/>
+ </div>
+<div class="form-outline form-white mb-4">
+      <input type="email"  name="email" formControlName="email" class="form-control form-control-lg" placeholder="email"/>
+ </div>
+
+  <div class="form-outline form-white mb-4">
+    <input type="password" id="typePasswordX" name="nameplaintextPassword" formControlName="nameplaintextPassword"  placeholder="mot de passe"  class="form-control form-control-lg" />
+  </div>
+
+<button class="w-100 btn btn-lg btn-primary" type="submit">Inscription</button>
+<br>
+<br>
+<div *ngIf="success" style="color:green;"> Inscription realisee avec succes!
+
+<a class="nav-link" routerLink="/login">Connexion</a>
+</div>
+<p *ngIf="errMessage" class="alert alert-danger alert-dismissible fade show">{{errMessage}}</p>
+</form>
